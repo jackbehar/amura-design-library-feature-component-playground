@@ -1,0 +1,48 @@
+{
+  "name": "amura-design-library",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "uxpin:dump": "uxpin-merge dump --config ./uxpin.config.cjs",
+    "uxpin:experiment": "uxpin-merge experiment --config ./uxpin.config.cjs --disable-tunneling",
+    "uxpin:push": "uxpin-merge push --config ./uxpin.config.cjs"
+  },
+  "dependencies": {
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/material": "5.11.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tss-react": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/react": "18.2.42",
+    "@types/react-dom": "18.0.10",
+    "@uxpin/merge-cli": "^3.7.2",
+    "@vitejs/plugin-react-swc": "^3.8.1",
+    "babel-loader": "^8.4.1",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "typescript": "5.8.3",
+    "vite": "^5.4.20",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^5.1.4"
+  },
+  "resolutions": {
+    "@types/react": "18.2.42",
+    "@types/react-dom": "18.0.10"
+  },
+  "overrides": {
+    "@types/react": "18.2.42",
+    "@types/react-dom": "18.0.10"
+  }
+}
