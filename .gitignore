@@ -7,6 +7,7 @@
 node_modules/
 dist/
 storybook-static/
+.uxpin-merge/
 
 # Compiled Java class files
 *.class

@@ -1,4 +1,5 @@
 import { useCommonStyles } from '../../theme/CommonStyles';
+import type { ChipProps } from '@mui/material';
 import { Chip } from '@mui/material';
 
 import { useStyles } from './MUIToken.styles';
@@ -18,7 +19,7 @@ const MUIToken = (props: IProps) => {
       color="default"
       deleteIcon={Close}
       title={(restProps?.label as string) || ''}
-      {...restProps}
+      {...(restProps as ChipProps)}
     />
   );
 };

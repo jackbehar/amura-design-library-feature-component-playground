@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 
-import { SliderProps } from '@mui/material';
+import type { SliderProps } from '@mui/material';
 
 import { SliderStyled } from './MUISlider.styles';
+import type { MUISliderProps } from './MUISlider.types';
 
-const MUISlider = (props: SliderProps) => {
+const MUISlider = (props: MUISliderProps) => {
   const { value, onChange, ...restprops } = props;
   const [range, setRange] = useState(value);
 
@@ -19,7 +20,13 @@ const MUISlider = (props: SliderProps) => {
     onChange && onChange(event, rangevalue, activeThumb);
   };
 
-  return <SliderStyled value={range} onChange={handleChange} {...restprops} />;
+  return (
+    <SliderStyled
+      value={range}
+      onChange={handleChange}
+      {...(restprops as SliderProps)}
+    />
+  );
 };
 
 export default MUISlider;
