@@ -1,9 +1,7 @@
 import type { SwitchProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `SwitchProps`). */
 type MUISwitchPublicMuiProps = Pick<
   SwitchProps,
-  | 'checked'
   | 'defaultChecked'
   | 'disabled'
   | 'name'
@@ -18,6 +16,11 @@ type MUISwitchPublicMuiProps = Pick<
   | 'inputProps'
 >;
 
+/** Props surfaced in UXPin Merge (narrowed from full MUI `SwitchProps`). */
 export type MUISwitchProps = MUISwitchPublicMuiProps & {
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
+  checked?: boolean;
   isGrayWhenDisabled?: boolean;
 };

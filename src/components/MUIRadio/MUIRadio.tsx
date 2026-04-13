@@ -1,7 +1,7 @@
-import { RadioProps } from '@mui/material';
+import type { MUIRadioProps } from './MUIRadio.types';
 
 import { RadioStyled } from './MUIRadio.styles';
 
-const MUIRadio = (props: RadioProps) => <RadioStyled {...props} />;
+const MUIRadio = (props: MUIRadioProps) => <RadioStyled {...props} />;
 
 export default MUIRadio;

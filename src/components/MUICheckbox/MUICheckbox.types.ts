@@ -1,9 +1,7 @@
 import type { CheckboxProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `CheckboxProps`). */
-export type MUICheckboxProps = Pick<
+type MUICheckboxPropsBase = Pick<
   CheckboxProps,
-  | 'checked'
   | 'defaultChecked'
   | 'disabled'
   | 'indeterminate'
@@ -16,4 +14,14 @@ export type MUICheckboxProps = Pick<
   | 'sx'
   | 'id'
   | 'tabIndex'
+  | 'icon'
+  | 'checkedIcon'
 >;
+
+/** Props surfaced in UXPin Merge (narrowed from full MUI `CheckboxProps`). */
+export type MUICheckboxProps = MUICheckboxPropsBase & {
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
+  checked?: boolean;
+};

@@ -1,9 +1,9 @@
-import { CheckboxProps } from '@mui/material';
+import type { MUICheckboxProps } from './MUICheckbox.types';
 
 import { CheckboxStyled } from './MUICheckbox.styles';
 import { CheckboxCheckedIcon, CheckboxUncheckedIcon } from './MUICheckbox.svg';
 
-const MUICheckbox = (props: CheckboxProps) => (
+const MUICheckbox = (props: MUICheckboxProps) => (
   <CheckboxStyled
     {...props}
     icon={props?.icon ?? <CheckboxUncheckedIcon />}

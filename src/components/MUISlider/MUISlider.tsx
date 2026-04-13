@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { SliderProps } from '@mui/material';
+import type { MUISliderProps } from './MUISlider.types';
 
 import { SliderStyled } from './MUISlider.styles';
 
-const MUISlider = (props: SliderProps) => {
+const MUISlider = (props: MUISliderProps) => {
   const { value, onChange, ...restprops } = props;
   const [range, setRange] = useState(value);
 

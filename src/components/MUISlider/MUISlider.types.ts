@@ -1,10 +1,8 @@
 import type { SliderProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `SliderProps`). */
-export type MUISliderProps = Pick<
+type MUISliderPropsBase = Pick<
   SliderProps,
   | 'defaultValue'
-  | 'value'
   | 'onChange'
   | 'min'
   | 'max'
@@ -22,3 +20,11 @@ export type MUISliderProps = Pick<
   | 'tabIndex'
   | 'id'
 >;
+
+/** Props surfaced in UXPin Merge (narrowed from full MUI `SliderProps`). */
+export type MUISliderProps = MUISliderPropsBase & {
+  /**
+   * @uxpinbind onChange 1
+   */
+  value?: number | number[];
+};

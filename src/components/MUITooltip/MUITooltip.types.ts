@@ -1,10 +1,9 @@
+import type { ReactNode } from 'react';
 import type { TooltipProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `TooltipProps`). */
-export type MUITooltipProps = Pick<
+type MUITooltipMuiProps = Pick<
   TooltipProps,
   | 'title'
-  | 'children'
   | 'placement'
   | 'arrow'
   | 'open'
@@ -18,3 +17,13 @@ export type MUITooltipProps = Pick<
   | 'sx'
   | 'describeChild'
 >;
+
+/**
+ * Props surfaced in UXPin Merge (narrowed from full MUI `TooltipProps`).
+ * `children` is `ReactNode` (not MUI’s `ReactElement`) so Merge serializes it as `node`
+ * and allows dragging components into the trigger slot; MUITooltip still normalizes
+ * primitives to a single element for the underlying Tooltip.
+ */
+export type MUITooltipProps = MUITooltipMuiProps & {
+  children?: ReactNode;
+};
