@@ -1,3 +1,6 @@
+const path = require('path');
+const { pathToFileURL } = require('url');
+
 /**
  * UXPin Merge library configuration.
  * @see https://www.uxpin.com/docs/merge/config-file/
@@ -31,5 +34,15 @@ module.exports = {
     ],
     wrapper: 'src/uxpin/UXPinWrapper.tsx',
     webpackConfig: 'webpack.uxpin.config.cjs',
+    settings: {
+      useUXPinProps: true,
+      useConvertingToUXPinClassic: true,
+      useAI: {
+        name: 'Amura Design Library',
+        // Merge CLI writes serialized component props/structure here (run dump or experiment first).
+        documentationUrl: pathToFileURL(path.join(__dirname, '.uxpin-merge', 'metadata.json')).href,
+        systemPrompt: require('./systemPrompt'),
+      },
+    },
   },
 };
