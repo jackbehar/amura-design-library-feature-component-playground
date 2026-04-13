@@ -7,6 +7,13 @@
 module.exports = {
   name: 'Amura Design Library',
   components: {
+    // Same as index.html — Merge does not use index.html, so fonts must be injected here.
+    pageHeadTags: [
+      '<link href="https://fonts.cdnfonts.com/css/graphik" rel="stylesheet" />',
+      '<link rel="preconnect" href="https://fonts.googleapis.com" />',
+      '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />',
+      '<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet" />',
+    ],
     categories: [
       {
         name: 'Components',
