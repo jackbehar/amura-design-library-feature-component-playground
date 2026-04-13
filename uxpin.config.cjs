@@ -39,8 +39,8 @@ module.exports = {
       useConvertingToUXPinClassic: true,
       useAI: {
         name: 'Amura Design Library',
-        documentationUrl: pathToFileURL(path.join(__dirname, '.uxpin-merge', 'metadata.json')).href,
-        // systemPrompt: require('./systemPrompt'),
+        documentationUrl: '',
+        systemPrompt: '',
       },
     },
   },
