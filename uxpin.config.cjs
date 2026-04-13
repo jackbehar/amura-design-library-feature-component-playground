@@ -39,9 +39,8 @@ module.exports = {
       useConvertingToUXPinClassic: true,
       useAI: {
         name: 'Amura Design Library',
-        // Merge CLI writes serialized component props/structure here (run dump or experiment first).
         documentationUrl: pathToFileURL(path.join(__dirname, '.uxpin-merge', 'metadata.json')).href,
-        systemPrompt: require('./systemPrompt'),
+        // systemPrompt: require('./systemPrompt'),
       },
     },
   },
