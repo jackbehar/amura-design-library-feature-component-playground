@@ -1,24 +1,7 @@
-import type { ChipProps } from '@mui/material';
+import { ChipProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `ChipProps`). */
-type MUITokenPublicMuiProps = Pick<
-  ChipProps,
-  | 'label'
-  | 'onDelete'
-  | 'disabled'
-  | 'deleteIcon'
-  | 'clickable'
-  | 'className'
-  | 'sx'
-  | 'variant'
-  | 'color'
-  | 'tabIndex'
-  | 'id'
-  | 'avatar'
->;
-
-export type IProps = MUITokenPublicMuiProps & {
+export interface IProps extends ChipProps {
   minWidth?: string;
   maxWidth?: string;
   active?: boolean;
-};
+}

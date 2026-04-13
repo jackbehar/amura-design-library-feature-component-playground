@@ -1,12 +1,15 @@
-import type { SwitchProps } from '@mui/material';
+import { SwitchProps } from '@mui/material';
 
 import { SwitchStyled } from './MUISwitch.styles';
-import type { MUISwitchProps } from './MUISwitch.types';
+
+interface MUISwitchProps extends SwitchProps {
+  isGrayWhenDisabled?: boolean;
+}
 
 export default function MUISwitch({ isGrayWhenDisabled = false, ...props }: MUISwitchProps) {
   return (
     <SwitchStyled
-      {...(props as SwitchProps)}
+      {...props}
       className={`${props.className || ''} ${isGrayWhenDisabled && props.disabled ? 'gray-disabled' : ''}`}
     />
   );

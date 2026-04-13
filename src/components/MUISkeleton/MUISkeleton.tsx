@@ -1,8 +1,7 @@
-import type { SkeletonProps } from '@mui/material';
+import { SkeletonProps } from '@mui/material';
 
 import { StyledSkeleton } from './MUISkeleton.styles';
-import type { MUISkeletonProps } from './MUISkeleton.types';
 
-export default function MUISkeleton(props: MUISkeletonProps) {
-  return <StyledSkeleton {...(props as SkeletonProps)} />;
+export default function MUISkeleton(props: SkeletonProps) {
+  return <StyledSkeleton {...props} />;
 }

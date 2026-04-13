@@ -1,8 +1,7 @@
-import type { TooltipProps } from '@mui/material';
+import { TooltipProps } from '@mui/material';
 
 import { TooltipStyled } from './MUITooltip.styles';
-import type { MUITooltipProps } from './MUITooltip.types';
 
-const MUITooltip = (props: MUITooltipProps) => <TooltipStyled {...(props as TooltipProps)} />;
+const MUITooltip = (props: TooltipProps) => <TooltipStyled {...props} />;
 
 export default MUITooltip;
