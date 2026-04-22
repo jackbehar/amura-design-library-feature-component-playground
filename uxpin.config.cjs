@@ -34,13 +34,13 @@ module.exports = {
     ],
     wrapper: 'src/uxpin/UXPinWrapper.tsx',
     webpackConfig: 'webpack.uxpin.config.cjs',
-    settings: {
-      useAI: {
-        name: "Amura Design Library",
-        documentationUrl: "",
-        systemPrompt: "" },
-      useUXPinProps: true,
-      useConvertingToUXPinClassic: true
-    },
+  },
+  settings: {
+    useAI: {
+      name: "Amura Design Library",
+      documentationUrl: "",
+      systemPrompt: "" },
+    useUXPinProps: true,
+    useConvertingToUXPinClassic: true
   },
 };
