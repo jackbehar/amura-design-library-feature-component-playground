@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-const { pathToFileURL } = require('url');
 
 /**
  * UXPin Merge library configuration.
@@ -7,10 +7,18 @@ const { pathToFileURL } = require('url');
  *
  * Use .cjs so Node can require() this file while the repo uses "type": "module".
  */
+const metadataPath = path.resolve(__dirname, '.uxpin-merge/metadata.json');
+
+let systemPrompt = 'Use components from the Amura Design Library.';
+if (fs.existsSync(metadataPath)) {
+  const metadataRaw = fs.readFileSync(metadataPath, 'utf8');
+  systemPrompt = `Use components from the Amura Design Library. Here is metadata for the components:\n${metadataRaw}`;
+}
+
 module.exports = {
   name: 'Amura Design Library',
   components: {
-    // Same as index.html — Merge does not use index.html, so fonts must be injected here.
+    // Same as index.html - Merge does not use index.html, so fonts must be injected here.
     pageHeadTags: [
       '<link href="https://fonts.cdnfonts.com/css/graphik" rel="stylesheet" />',
       '<link rel="preconnect" href="https://fonts.googleapis.com" />',
@@ -34,13 +42,14 @@ module.exports = {
     ],
     wrapper: 'src/uxpin/UXPinWrapper.tsx',
     webpackConfig: 'webpack.uxpin.config.cjs',
-  },
-  settings: {
-    useAI: {
-      name: "Amura Design Library",
-      documentationUrl: "",
-      systemPrompt: "" },
-    useUXPinProps: true,
-    useConvertingToUXPinClassic: true
+    settings: {
+      useAI: {
+        name: 'Amura Design Library',
+        documentationUrl: '',
+        systemPrompt,
+      },
+      useUXPinProps: true,
+      useConvertingToUXPinClassic: true,
+    },
   },
 };
