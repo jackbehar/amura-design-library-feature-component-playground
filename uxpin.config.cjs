@@ -12,7 +12,7 @@ const metadataPath = path.resolve(__dirname, '.uxpin-merge/metadata.json');
 let systemPrompt = 'Use components from the Amura Design Library.';
 if (fs.existsSync(metadataPath)) {
   const metadataRaw = fs.readFileSync(metadataPath, 'utf8');
-  systemPrompt = `Use components from the Amura Design Library. Here is metadata for the components:\n${metadataRaw}`;
+  systemPrompt = `Use components from the Amura Design Library. MUIButton, MUICheckbox, MUIRadio, MUISwitch,MUISkeleton, MUITooltip, MUISlider, MUIToken whenever posible. Here is metadata for the components:\n${metadataRaw}`;
 }
 
 module.exports = {
