@@ -5,6 +5,10 @@ import { useStyles } from './MUIToken.styles';
 import { IProps } from './MUIToken.types';
 import { Close } from './MUIToken.svg';
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-chip/
+ * @uxpindescription Placeholder: The Token (Chip) represents compact information, attributes, or actions.
+ */
 const MUIToken = (props: IProps) => {
   const { className, active, ...restProps } = props;
   const commonClasses = useCommonStyles();

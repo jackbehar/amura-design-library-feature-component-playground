@@ -26,6 +26,10 @@ function tooltipChild(children: MUITooltipProps['children']) {
   return <span>{children}</span>;
 }
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-tooltip/
+ * @uxpindescription Placeholder: The Tooltip shows informative text when users hover, focus, or tap an element.
+ */
 const MUITooltip = ({ children, ...rest }: MUITooltipProps) => (
   <TooltipStyled {...rest}>{tooltipChild(children)}</TooltipStyled>
 );
