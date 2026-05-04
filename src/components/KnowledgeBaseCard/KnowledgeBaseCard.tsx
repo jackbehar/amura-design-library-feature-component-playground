@@ -7,6 +7,10 @@ import { useStyles } from "./KnowledgeBaseCard.styles";
 import { KBImage, SendIcon } from "./KnowledgeBaseCard.svg";
 import { IProps } from "./KnowledgeBaseCard.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Knowledge-base hit card with heading, description, tenant, and submit action.
+ */
 const KnowledgeBaseCard = (props: IProps) => {
   const { heading, description, onSubmit, tenant, postId } = props;
   const [disable, setDisable] = useState(false);

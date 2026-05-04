@@ -3,6 +3,10 @@ import React from "react";
 import { useStyles } from "./TopSheet.styles";
 import { IProps } from "./TopSheet.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Slide-down (or up) surface for menus or filters with click-away close.
+ */
 export default function TopSheet(props: IProps) {
   const {
     isOpen,

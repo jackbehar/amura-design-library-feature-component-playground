@@ -21,6 +21,10 @@ const formatTimeRange = (
   return `${formatTime(start)} - ${formatTime(end)}`;
 };
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Card for a scheduled event with time range, call type, and optional status.
+ */
 const EventCard = (props: IEventCardProps) => {
   const {
     title,

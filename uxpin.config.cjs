@@ -21,15 +21,33 @@ module.exports = {
       {
         name: 'Components',
         include: [
+          'src/components/Accordian/Accordian.tsx',
+          'src/components/ConfigurationCard/ConfigurationCard.tsx',
+          'src/components/DotStatus/DotStatus.tsx',
+          'src/components/EventCard/EventCard.tsx',
+          'src/components/InputField/InputField.tsx',
+          'src/components/KnowledgeBaseCard/KnowledgeBaseCard.tsx',
+          'src/components/MUIAutoSelect/MUIAutoSelect.tsx',
           'src/components/MUIButton/MUIButton.tsx',
           'src/components/MUICheckbox/MUICheckbox.tsx',
+          'src/components/MUIDrawer/MUIDrawer.tsx',
           'src/components/MUIRadio/MUIRadio.tsx',
-          'src/components/MUISwitch/MUISwitch.tsx',
           'src/components/MUISkeleton/MUISkeleton.tsx',
-          'src/components/MUITooltip/MUITooltip.tsx',
           'src/components/MUISlider/MUISlider.tsx',
+          'src/components/MUISwitch/MUISwitch.tsx',
+          'src/components/MUITabs/MUITabs.tsx',
           'src/components/MUIToken/MUIToken.tsx',
-          'src/components/Accordian/Accordian.tsx',
+          'src/components/MUITooltip/MUITooltip.tsx',
+          'src/components/MealCard/MealCard.tsx',
+          'src/components/ModalBox/ModalBox.tsx',
+          'src/components/PageHeader/PageHeader.tsx',
+          'src/components/ProgressBar/ProgressBar.tsx',
+          'src/components/PropertyCard/PropertyCard.tsx',
+          'src/components/ReadMoreReadLess/ReadMoreReadLess.tsx',
+          'src/components/RecipeCard/RecipeCard.tsx',
+          'src/components/SearchField/SearchField.tsx',
+          'src/components/SuggestiveInput/SuggestiveInput.tsx',
+          'src/components/TopSheet/TopSheet.tsx',
         ],
       },
     ],
@@ -44,27 +62,28 @@ module.exports = {
         systemPrompt: `You are a UI generation assistant for the Amura Design Library in UXPin Merge.
 
 Your primary goal is to build interfaces using these components whenever possible:
-- MUIButton
-- MUICheckbox
-- MUIRadio
-- MUISwitch
-- MUISkeleton
-- MUITooltip
-- MUISlider
-- MUIToken
-- Accordian
+- Accordian, ConfigurationCard, DotStatus, EventCard, InputField, KnowledgeBaseCard, MUIAutoSelect
+- MUIButton, MUICheckbox, MUIDrawer, MUIRadio, MUISkeleton, MUISlider, MUISwitch, MUITabs, MUIToken, MUITooltip
+- MealCard, ModalBox, PageHeader, ProgressBar, PropertyCard, ReadMoreReadLess, RecipeCard, SearchField, SuggestiveInput, TopSheet
 
 Rules:
 1. Prefer Amura components over native HTML controls.
 2. Use the component that best matches the intent:
    - Actions: MUIButton
-   - Binary selection: MUICheckbox or MUISwitch (switch for immediate on/off settings)
+   - Text entry: InputField, SearchField, SuggestiveInput (async suggestions), MUIAutoSelect (pick from options)
+   - Binary selection: MUICheckbox or MUISwitch
    - Single choice in a group: MUIRadio
-   - Numeric/range input: MUISlider
+   - Numeric/range: MUISlider; PropertyCard bundles slider + metric bars
    - Loading placeholders: MUISkeleton
-   - Helper/explanatory hover text: MUITooltip
-   - Token/chip/tag-like values: MUIToken
-   - Expandable sections, FAQs, or grouped detail: Accordian
+   - Hover help: MUITooltip
+   - Chips/tags: MUIToken
+   - Tabs: MUITabs
+   - Expandable sections: Accordian
+   - Overlays: ModalBox, MUIDrawer, TopSheet
+   - Page chrome: PageHeader
+   - Status/count badge: DotStatus; thin bar fill: ProgressBar
+   - Long copy truncation: ReadMoreReadLess
+   - Cards: ConfigurationCard, EventCard, KnowledgeBaseCard, MealCard, RecipeCard
 3. Keep layouts simple, accessible, and production-ready.
 4. Use clear labels, helper text, and meaningful defaults.
 5. Do not invent custom components if a listed Amura component can solve the use case.

@@ -6,6 +6,10 @@ import InputField from "../InputField/InputField";
 import { useStyles } from "./SuggestiveInput.styles";
 import { IOptions, ISearchWithPopUp } from "./SuggestiveInput.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-autocomplete/
+ * @uxpindescription Debounced search field with async options and custom row rendering in a popup.
+ */
 export default function SuggestiveInput(props: ISearchWithPopUp) {
   const {
     placeholder,

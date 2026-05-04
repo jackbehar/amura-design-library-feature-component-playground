@@ -8,6 +8,10 @@ import { useStyles } from "./PropertyCard.styles";
 import { InfoIcon } from "./PropertyCard.svg";
 import { IProps, marks } from "./PropertyCard.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-slider/
+ * @uxpindescription Card combining metric header, stacked ProgressBar rows, and a ranged MUISlider.
+ */
 const PropertyCard = (props: IProps) => {
   const {
     onRangeChange,

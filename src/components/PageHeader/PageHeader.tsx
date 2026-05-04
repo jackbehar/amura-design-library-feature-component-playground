@@ -5,6 +5,10 @@ import MUIButton from "../MUIButton/MUIButton";
 import { useStyles } from "./PageHeader.styles";
 import { IProps } from "./PageHeader.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Three-zone header with optional back control, title, clear-all, and adornments.
+ */
 export default function PageHeader(props: IProps) {
   const {
     handleBack,

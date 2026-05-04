@@ -4,6 +4,10 @@ import { useStyles } from "./DotStatus.styles";
 import { RightPointerIcon } from "./DotStatus.svg";
 import { IProps } from "./DotStatus.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Compact circular status badge for counts or unread indicators.
+ */
 const DotStatus = (props: IProps) => {
   const { count, onClick = () => {}, dotType, markAsUnread } = props;
   const { classes } = useStyles(props);

@@ -5,6 +5,10 @@ import { useStyles } from "./ConfigurationCard.styles";
 import { AmuraIcon, Clock } from "./ConfigurationCard.svg";
 import { IProps } from "./ConfigurationCard.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Summary card with avatar area, title, caption, and record metadata row.
+ */
 const ConfigurationCard = (props: IProps) => {
   const { cardTitle, cardCaption, recordTitle, time, acronym } = props;
   const { classes } = useStyles(props);

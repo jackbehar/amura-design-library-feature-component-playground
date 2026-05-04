@@ -8,6 +8,10 @@ import { useStyles } from "./SearchField.styles";
 import { CrossIcon, SearchIcon, TickIcon } from "./SearchField.svg";
 import { IProps } from "./SearchField.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Search input wrapping InputField with icons, clear, and optional email helpers.
+ */
 export default function SearchField(props: IProps) {
   const {
     disabled,

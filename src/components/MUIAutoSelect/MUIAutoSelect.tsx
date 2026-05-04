@@ -15,6 +15,10 @@ const CustomPopper = function (props: PopperProps) {
   return <Popper {...props} className={classes.root} placement="bottom" />;
 };
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-autocomplete/
+ * @uxpindescription Autocomplete built on MUI with Amura InputField, tokens, and custom option rows.
+ */
 export default function MUIAutoSelect(props: IProps) {
   const {
     className,

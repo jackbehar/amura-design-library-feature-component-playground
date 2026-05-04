@@ -4,6 +4,10 @@ import { useCommonStyles } from "../../theme/CommonStyles";
 import { useStyles } from "./MealCard.styles";
 import { IMealCardProps } from "./MealCard.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Meal timeline card with image, macros, actions (done/swap/redo), and slot state.
+ */
 const MealCard: React.FC<IMealCardProps> = ({
   time,
   title,

@@ -5,6 +5,10 @@ import { useCommonStyles } from "../../theme/CommonStyles";
 import { useStyles } from "./ReadMoreReadLess.styles";
 import { IProps, ReadButtonProps } from "./ReadMoreReadLess.types";
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Truncates long text with read more / read less toggles after a character limit.
+ */
 const ReadMoreReadLess = (props: IProps) => {
   const {
     children,

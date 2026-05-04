@@ -6,6 +6,10 @@ import { TabStyled, TabsStyled, useStyles } from "./MUITabs.styles";
 import { EditIcon } from "./MUITabs.svg";
 import { IProps } from "./MUITabs.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-tabs/
+ * @uxpindescription Horizontal tabs with optional edit affordance and Amura styling.
+ */
 const MUITabs = (props: IProps) => {
   const {
     tabOptions,

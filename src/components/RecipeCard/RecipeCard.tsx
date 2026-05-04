@@ -65,6 +65,10 @@ const getDietTypeSmallIcon = (dietType: DietType): JSX.Element | null => {
   return icons[dietType] || null;
 };
 
+/**
+ * @uxpindocurl https://www.uxpin.com/docs/
+ * @uxpindescription Recipe tile with image, diet icon, calories, cook time, and optional action.
+ */
 export default function RecipeCard(props: IRecipeCardProps) {
   const {
     onClick,

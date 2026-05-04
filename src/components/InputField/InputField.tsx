@@ -6,6 +6,10 @@ import MUIToken from "../MUIToken/MUIToken";
 import { useStyles } from "./InputField.styles";
 import { IProps } from "./InputField.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-text-field/
+ * @uxpindescription Text field with Amura styling, optional token display, and character limit support.
+ */
 export default function InputField(props: IProps) {
   const {
     renderValueAsToken,

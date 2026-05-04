@@ -6,6 +6,10 @@ import MUIButton from "../MUIButton/MUIButton";
 import { useStyles } from "./ModalBox.styles";
 import { IModalBoxProps } from "./ModalBox.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-dialog/
+ * @uxpindescription Modal dialog with title, body, configurable footer buttons, and optional backdrop.
+ */
 export default function ModalBox(props: IModalBoxProps) {
   const {
     customStyle,

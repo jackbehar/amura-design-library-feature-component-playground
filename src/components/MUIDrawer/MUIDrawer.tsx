@@ -11,6 +11,10 @@ import {
 } from "./MUIDrawer.styles";
 import { IProps } from "./MUIDrawer.types";
 
+/**
+ * @uxpindocurl https://mui.com/material-ui/react-drawer/
+ * @uxpindescription Anchored sheet overlay (top or bottom) with header, close control, and scrollable body.
+ */
 export default function MUIDrawer(props: IProps) {
   const {
     disableAutoClose,
