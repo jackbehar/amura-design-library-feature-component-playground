@@ -1,7 +1,11 @@
 import { MouseEventHandler, ReactElement, ReactNode } from "react";
 
 export interface IModalBoxProps {
+  /**
+   * @uxpinbind onOpenChange 0
+   */
   open: boolean;
+  onOpenChange?: (value: boolean) => void;
   modalTitle?: string;
   children: ReactNode;
   handleClose: MouseEventHandler;

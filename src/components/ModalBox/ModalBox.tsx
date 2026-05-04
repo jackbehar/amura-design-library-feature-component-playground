@@ -14,6 +14,7 @@ export default function ModalBox(props: IModalBoxProps) {
   const {
     customStyle,
     open,
+    onOpenChange,
     modalTitle,
     children,
     buttonConfig,
@@ -26,10 +27,19 @@ export default function ModalBox(props: IModalBoxProps) {
   } = props;
   const { classes } = useStyles(restProps);
   const commonClasses = useCommonStyles();
+  const handleModalClose = (event: React.MouseEvent) => {
+    onOpenChange?.(false);
+    handleClose(event);
+  };
+  const handleDialogClose = (event: object) => {
+    onOpenChange?.(false);
+    handleClose(event as React.MouseEvent);
+  };
 
   return (
     <Dialog
       open={open}
+      onClose={handleDialogClose}
       hideBackdrop={hideBackdrop}
       className={`${classes.dialogueBox} ${customStyle}`}
     >
@@ -45,7 +55,7 @@ export default function ModalBox(props: IModalBoxProps) {
                 <CrossIcon
                   className={classes.closeIcon}
                   data-testid="modal-close-icon"
-                  onClick={handleClose}
+                  onClick={handleModalClose}
                 />
               </span>
             )}

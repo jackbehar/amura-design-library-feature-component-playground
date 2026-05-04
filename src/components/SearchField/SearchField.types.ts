@@ -4,6 +4,9 @@ export interface IProps {
   placeholder?: string;
   customStyle?: string;
   autoFocus?: boolean;
+  /**
+   * @uxpinbind handleSearch 0
+   */
   value?: string;
   disabled?: boolean;
   onKeyDown?: () => void;

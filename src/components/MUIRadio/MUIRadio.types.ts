@@ -1,7 +1,6 @@
 import type { RadioProps } from '@mui/material';
 
-/** Props surfaced in UXPin Merge (narrowed from full MUI `RadioProps`). */
-export type MUIRadioProps = Pick<
+type MUIRadioPropsBase = Pick<
   RadioProps,
   | 'checked'
   | 'defaultChecked'
@@ -17,3 +16,11 @@ export type MUIRadioProps = Pick<
   | 'id'
   | 'tabIndex'
 >;
+
+/** Props surfaced in UXPin Merge (narrowed from full MUI `RadioProps`). */
+export type MUIRadioProps = Omit<MUIRadioPropsBase, "checked"> & {
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
+  checked?: boolean;
+};

@@ -6,8 +6,12 @@ export interface IProps {
    * @uxpincontroltype color
    */
   color?: string;
+  /**
+   * @uxpinbind onSelectedChange 0
+   */
   isSelected?: boolean;
   onClick?: MouseEventHandler;
+  onSelectedChange?: (value: boolean) => void;
   count?: number;
   opacityControl?: boolean;
   clickable?: boolean;

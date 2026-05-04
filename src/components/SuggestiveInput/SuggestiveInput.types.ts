@@ -18,6 +18,9 @@ export interface ISearchWithPopUp {
     event: React.MouseEvent | React.KeyboardEvent,
     data: IOptions,
   ) => void;
+  /**
+   * @uxpinbind onInputChange 1
+   */
   values?: string;
   listRenderer: (data: IOptions) => ReactNode;
 }

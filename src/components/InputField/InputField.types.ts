@@ -30,7 +30,11 @@ type InputFieldPropsBase = Pick<
   | "SelectProps"
 >;
 
-export interface IProps extends InputFieldPropsBase {
+export interface IProps extends Omit<InputFieldPropsBase, "value"> {
+  /**
+   * @uxpinbind onChange 0.target.value
+   */
+  value?: TextFieldProps["value"];
   isReadOnly?: boolean;
   renderValueAsToken?: boolean;
   renderValueAsTokenDeletable?: boolean;
