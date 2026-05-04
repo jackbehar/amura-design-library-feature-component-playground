@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, Ref } from "react";
 
 export interface IProps {
   children: ReactNode;
@@ -7,4 +7,6 @@ export interface IProps {
   handleClose?: Function;
   variant?: "top" | "bottom";
   customStyle?: string;
+  /** @uxpinignoreprop */
+  uxpinRef?: Ref<HTMLDivElement>;
 }
