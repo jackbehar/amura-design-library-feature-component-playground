@@ -19,9 +19,37 @@ export interface IOptionMenuProps {
   endAdornmentNotFlex?: boolean;
 }
 
-export interface IProps extends Partial<
-  AutocompleteProps<optionsType, boolean, boolean, boolean>
-> {
+type MUIAutoSelectPropsBase = Pick<
+  AutocompleteProps<optionsType, boolean, boolean, boolean>,
+  | "value"
+  | "defaultValue"
+  | "multiple"
+  | "disabled"
+  | "readOnly"
+  | "size"
+  | "onChange"
+  | "onInputChange"
+  | "onOpen"
+  | "onClose"
+  | "open"
+  | "disableCloseOnSelect"
+  | "filterSelectedOptions"
+  | "blurOnSelect"
+  | "clearOnBlur"
+  | "autoHighlight"
+  | "autoSelect"
+  | "loading"
+  | "loadingText"
+  | "noOptionsText"
+  | "isOptionEqualToValue"
+  | "getOptionDisabled"
+  | "renderInput"
+  | "className"
+  | "id"
+  | "sx"
+>;
+
+export interface IProps extends Partial<MUIAutoSelectPropsBase> {
   options: Array<optionsType>;
   InputProps?: InputFieldProps;
   OptionMenuProps?: IOptionMenuProps;

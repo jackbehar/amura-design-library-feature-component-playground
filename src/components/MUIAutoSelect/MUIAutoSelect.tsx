@@ -30,6 +30,7 @@ export default function MUIAutoSelect(props: IProps) {
     noDeletableToken,
     renderOption,
     options,
+    renderInput,
     ...restProps
   } = props;
   const { classes } = useStyles(props);
@@ -43,6 +44,12 @@ export default function MUIAutoSelect(props: IProps) {
     }
   }, [options, reRenderOptions]);
 
+  const resolvedRenderInput =
+    renderInput ??
+    ((params) => (
+      <InputField error={error ? error : false} {...params} {...InputProps} />
+    ));
+
   return (
     <Autocomplete
       disableClearable
@@ -52,9 +59,8 @@ export default function MUIAutoSelect(props: IProps) {
       onKeyDown={(e) => {
         e.stopPropagation();
       }}
-      renderInput={(params) => (
-        <InputField error={error ? error : false} {...params} {...InputProps} />
-      )}
+      {...restProps}
+      renderInput={resolvedRenderInput}
       {...{
         renderTags: (value, getTagProps) => {
           return (
@@ -108,7 +114,6 @@ export default function MUIAutoSelect(props: IProps) {
       )}
       options={reRenderOptions ? innerOptions : options}
       multiple={multiple}
-      {...restProps}
     />
   );
 }
