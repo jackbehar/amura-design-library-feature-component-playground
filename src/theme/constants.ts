@@ -1,3 +1,5 @@
+export const SM320 = "@media (max-width: 320px)";
+
 export const theme = {
   colors: {
     gray: {

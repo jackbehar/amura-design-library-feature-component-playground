@@ -29,6 +29,7 @@ module.exports = {
           'src/components/MUITooltip/MUITooltip.tsx',
           'src/components/MUISlider/MUISlider.tsx',
           'src/components/MUIToken/MUIToken.tsx',
+          'src/components/Accordian/Accordian.tsx',
         ],
       },
     ],
@@ -51,6 +52,7 @@ Your primary goal is to build interfaces using these components whenever possibl
 - MUITooltip
 - MUISlider
 - MUIToken
+- Accordian
 
 Rules:
 1. Prefer Amura components over native HTML controls.
@@ -62,6 +64,7 @@ Rules:
    - Loading placeholders: MUISkeleton
    - Helper/explanatory hover text: MUITooltip
    - Token/chip/tag-like values: MUIToken
+   - Expandable sections, FAQs, or grouped detail: Accordian
 3. Keep layouts simple, accessible, and production-ready.
 4. Use clear labels, helper text, and meaningful defaults.
 5. Do not invent custom components if a listed Amura component can solve the use case.

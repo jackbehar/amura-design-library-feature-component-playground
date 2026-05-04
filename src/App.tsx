@@ -3,7 +3,17 @@ import { ThemeProvider } from '@mui/material/styles';
 import { RadioGroup, FormControlLabel, Box } from '@mui/material';
 
 import CreateCustomTheme from './theme';
-import { MUIButton, MUICheckbox, MUIRadio, MUISwitch, MUISkeleton, MUITooltip, MUISlider, MUIToken } from './components';
+import {
+  MUIButton,
+  MUICheckbox,
+  MUIRadio,
+  MUISwitch,
+  MUISkeleton,
+  MUITooltip,
+  MUISlider,
+  MUIToken,
+  Accordian,
+} from './components';
 import './App.css';
 
 const theme = CreateCustomTheme({});
@@ -219,6 +229,29 @@ function App() {
                   />
                 </Box>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Accordian Section */}
+        <section className="component-section">
+          <h2 className="section-title">Accordian</h2>
+          <p className="section-description">
+            Expandable panel with summary row and custom expand icon
+          </p>
+          <div className="component-demo">
+            <div className="demo-row" style={{ flexDirection: 'column', gap: '12px', width: '100%', maxWidth: 480 }}>
+              <Accordian accordianTitle="Basic accordion" defaultExpanded>
+                Collapsed content uses the shared body style. Use this for FAQs, settings groups, or
+                supplementary details.
+              </Accordian>
+              <Accordian accordianTitle="With subtitle" subTitle="Optional">
+                When <code>subTitle</code> is set, the header shows a two-column title row with the
+                subtitle aligned to the right.
+              </Accordian>
+              <Accordian accordianTitle="Disabled" disabled>
+                This panel cannot be opened.
+              </Accordian>
             </div>
           </div>
         </section>
