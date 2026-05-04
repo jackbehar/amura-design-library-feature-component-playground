@@ -1,5 +1,9 @@
 export interface ProgressProps {
   progressValue: number;
+  /**
+ * Color of the progress bar
+ * @uxpincontroltype color
+ */
   progreesColor: string;
 }
 

@@ -1,6 +1,36 @@
-import { StandardTextFieldProps } from "@mui/material";
+import type { TextFieldProps } from "@mui/material";
+import type { MutableRefObject } from "react";
 
-export interface IProps extends StandardTextFieldProps {
+type InputFieldPropsBase = Pick<
+  TextFieldProps,
+  | "label"
+  | "value"
+  | "defaultValue"
+  | "placeholder"
+  | "helperText"
+  | "error"
+  | "disabled"
+  | "required"
+  | "name"
+  | "id"
+  | "className"
+  | "size"
+  | "fullWidth"
+  | "select"
+  | "autoFocus"
+  | "onChange"
+  | "onBlur"
+  | "onFocus"
+  | "onClick"
+  | "onKeyDown"
+  | "onPaste"
+  | "InputProps"
+  | "inputProps"
+  | "InputLabelProps"
+  | "SelectProps"
+>;
+
+export interface IProps extends InputFieldPropsBase {
   isReadOnly?: boolean;
   renderValueAsToken?: boolean;
   renderValueAsTokenDeletable?: boolean;
@@ -14,6 +44,6 @@ export interface IProps extends StandardTextFieldProps {
   characterLimit?: number;
   multiline?: boolean;
   maxRows?: number;
-  inputTextRef?: React.MutableRefObject<HTMLInputElement>;
+  inputTextRef?: MutableRefObject<HTMLInputElement | null>;
   compactMultiline?: boolean;
 }

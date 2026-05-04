@@ -1,6 +1,22 @@
 import { ButtonProps } from '@mui/material';
 
-export interface IProps extends ButtonProps {
+type MUIButtonPropsBase = Pick<
+  ButtonProps,
+  | 'children'
+  | 'variant'
+  | 'size'
+  | 'disabled'
+  | 'fullWidth'
+  | 'onClick'
+  | 'type'
+  | 'disableRipple'
+  | 'id'
+  | 'tabIndex'
+  | 'className'
+  | 'sx'
+>;
+
+export interface IProps extends MUIButtonPropsBase {
   fontSize?: string;
   showSingleLine?: boolean;
   background?: string;
