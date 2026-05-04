@@ -28,7 +28,7 @@ const MUITabs = (props: IProps) => {
   }, [activeTab]);
 
   const handleChange = (_: React.SyntheticEvent, value: string) => {
-    onTabChange(value);
+    onTabChange?.(value);
     setCurrentActiveTab(value);
   };
 
