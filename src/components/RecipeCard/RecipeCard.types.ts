@@ -9,9 +9,11 @@ export type DietType =
   | "Fruitarian";
 
 export interface IRecipeCardProps {
-  /** URL of the recipe image */
+  /** URL of the recipe image 
+  * @uxpincontroltype image
+  */
   imageUrl: string;
-  /** Name of the recipe */
+  /** Name of the recipe  */
   recipeName: string;
   /** Calorie count as a string (will be formatted with nFormatter) */
   calories?: string;
