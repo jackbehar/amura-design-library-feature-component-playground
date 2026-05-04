@@ -559,11 +559,12 @@ function App() {
           </div>
         </section>
 
-        {/* ConfigurationCard Section */}
+        {/* ConfigurationCard Section — imgUrl: @uxpincontroltype image in ConfigurationCard.types.ts */}
         <section className="component-section">
           <h2 className="section-title">ConfigurationCard</h2>
           <p className="section-description">
-            Card component for configuration items
+            Card component for configuration items. Optional imgUrl is typed for UXPin as an image control
+            (@uxpincontroltype image in types).
           </p>
           <div
             className="component-demo"
@@ -851,11 +852,12 @@ function App() {
           </div>
         </section>
 
-        {/* RecipeCard Section */}
+        {/* RecipeCard Section — imageUrl: @uxpincontroltype image in RecipeCard.types.ts */}
         <section className="component-section">
           <h2 className="section-title">RecipeCard</h2>
           <p className="section-description">
-            Recipe display card with diet type, calories, and cooking time
+            Recipe display card with diet type, calories, and cooking time. imageUrl uses @uxpincontroltype
+            image in types.
           </p>
           <div className="component-demo">
             <div
@@ -914,11 +916,11 @@ function App() {
           </div>
         </section>
 
-        {/* MealCard Section */}
+        {/* MealCard Section — imageUrl: @uxpincontroltype image in MealCard.types.ts */}
         <section className="component-section">
           <h2 className="section-title">MealCard</h2>
           <p className="section-description">
-            Timeline meal card with status and actions
+            Timeline meal card with status and actions. imageUrl uses @uxpincontroltype image in types.
           </p>
           <div className="component-demo">
             <div

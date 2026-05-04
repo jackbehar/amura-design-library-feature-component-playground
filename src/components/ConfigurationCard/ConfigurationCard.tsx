@@ -7,7 +7,7 @@ import { IProps } from "./ConfigurationCard.types";
 
 /**
  * @uxpindocurl https://www.uxpin.com/docs/
- * @uxpindescription Summary card with avatar area, title, caption, and record metadata row.
+ * @uxpindescription Summary card with avatar area, title, caption, and record metadata row. Prop imgUrl is an image URL; types use * @uxpincontroltype image (ConfigurationCard.types.ts).
  */
 const ConfigurationCard = (props: IProps) => {
   const { cardTitle, cardCaption, recordTitle, time, acronym } = props;

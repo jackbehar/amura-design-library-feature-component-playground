@@ -16,7 +16,10 @@ export interface IMealCardProps {
   kcal: number;
   /** Cooking time in minutes */
   mins: number;
-  /** Image URL for the meal */
+  /**
+   * Image URL for the meal
+   * @uxpincontroltype image
+   */
   imageUrl: string;
 
   /** Time displayed on the right side */

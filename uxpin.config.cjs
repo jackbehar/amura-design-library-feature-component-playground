@@ -65,12 +65,13 @@ GLOBAL
 - Use exact prop names from this document (library uses intentional spellings: accordianTitle, progreesColor, showOnlyChildern).
 - Extend MUI props only where the component extends MUI types; do not invent props.
 - ReactNode slots accept strings or elements. Handlers: use realistic names (onClick, onChange, handleClose, etc.).
+- Image URL strings use JSDoc * @uxpincontroltype image in *.types.ts so UXPin shows an image control: RecipeCard imageUrl, MealCard imageUrl, ConfigurationCard imgUrl.
 
 COMPONENT APIs
 
 Accordian — MUI Accordion + Amura chrome. Required: accordianTitle (ReactNode), children (ReactNode). Optional: subTitle, disabled, iconColor, removeShadow, customStyle; plus MUI Accordion props (e.g. defaultExpanded, expanded, onChange).
 
-ConfigurationCard — Summary card. Optional: imgUrl, cardTitle, cardCaption, recordTitle, time, acronym, selected.
+ConfigurationCard — Summary card. Optional: imgUrl (image URL, @uxpincontroltype image), cardTitle, cardCaption, recordTitle, time, acronym, selected.
 
 DotStatus — Count/unread badge. Optional: color, isSelected, onClick, count, opacityControl, clickable, dotType ("REDDOT" | "GREENDOT"), markAsUnread.
 
@@ -102,7 +103,7 @@ MUIToken — Extends MUI ChipProps. Use label (string), active (boolean), onDele
 
 MUITooltip — Narrowed TooltipProps + children (ReactNode). Required in practice: title. Common: placement, arrow, open, enterDelay, leaveDelay, describeChild, className, sx. Wrap the trigger element as child.
 
-MealCard — Meal timeline row. Required: time, title, kcal (number), mins (number), imageUrl, isLastMealOfDay (boolean). Optional: rightTime, showDoneButton, onDoneClick, showRedoIcon, onRedoClick, redoIcon, showSwapIcon (default true), onSwapClick, swapIcon, mealState ("before_slot"|"active"|"missed"|"logged"|"loading"), progress, canInteract, loggedAt, className.
+MealCard — Meal timeline row. Required: time, title, kcal (number), mins (number), imageUrl (image URL, @uxpincontroltype image), isLastMealOfDay (boolean). Optional: rightTime, showDoneButton, onDoneClick, showRedoIcon, onRedoClick, redoIcon, showSwapIcon (default true), onSwapClick, swapIcon, mealState ("before_slot"|"active"|"missed"|"logged"|"loading"), progress, canInteract, loggedAt, className.
 
 ModalBox — Dialog. Required: open (boolean), children, handleClose (MouseEventHandler), buttonConfig (array of { text: string|element, variant: "contained"|"text", onClick (e)=>void, fullWidth?, disabled? }). Optional: modalTitle, buttonPlacement, titleAlignment, customStyle, panelWidth, hideCloseIcon, showOnlyChildern (typo), hideBackdrop.
 
@@ -114,7 +115,7 @@ PropertyCard — Metric + stacked bars + slider 0–10. Required: id (string key
 
 ReadMoreReadLess — Required: children (string only), charLimit (number). Optional: ellipsis, readMoreText, readLessText, readMoreClassName, readLessClassName.
 
-RecipeCard — Required: imageUrl, recipeName. Optional: calories (string), easyToCook, isDisplayInLine, isButton, handleButton, buttonText, cookingTime, dietType ("Vegan"|"Vegetarian"|"Omnivore"|"Eggetarian"|"Pescatarian"|"Fruitarian"), onClick, className.
+RecipeCard — Required: imageUrl (image URL, @uxpincontroltype image), recipeName. Optional: calories (string), easyToCook, isDisplayInLine, isButton, handleButton, buttonText, cookingTime, dietType ("Vegan"|"Vegetarian"|"Omnivore"|"Eggetarian"|"Pescatarian"|"Fruitarian"), onClick, className.
 
 SearchField — Required: handleSearch ((value: string) => void). Optional: maxHeight, placeholder, customStyle, autoFocus, value, disabled, onKeyDown, isInputVariant, setSearchResult, setSearchString, isReadOnly, onFocus, onClick, disableAutoFocus, searchIcon, onPaste, isValidEmail, onAddEmail.
 

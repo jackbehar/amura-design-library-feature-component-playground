@@ -6,7 +6,7 @@ import { IMealCardProps } from "./MealCard.types";
 
 /**
  * @uxpindocurl https://www.uxpin.com/docs/
- * @uxpindescription Meal timeline card with image, macros, actions (done/swap/redo), and slot state.
+ * @uxpindescription Meal timeline card with image, macros, actions (done/swap/redo), and slot state. Prop imageUrl is an image URL; types use * @uxpincontroltype image (MealCard.types.ts).
  */
 const MealCard: React.FC<IMealCardProps> = ({
   time,

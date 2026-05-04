@@ -27,7 +27,7 @@ export { default as DotStatus } from "./DotStatus/DotStatus";
 export { default as ReadMoreReadLess } from "./ReadMoreReadLess/ReadMoreReadLess";
 export { default as ProgressBar } from "./ProgressBar/ProgressBar";
 
-// Card Components
+// Card Components (image URL props: ConfigurationCard imgUrl, RecipeCard imageUrl, MealCard imageUrl — JSDoc * @uxpincontroltype image in each *.types.ts)
 export { default as ConfigurationCard } from "./ConfigurationCard/ConfigurationCard";
 export { default as KnowledgeBaseCard } from "./KnowledgeBaseCard/KnowledgeBaseCard";
 export { default as PropertyCard } from "./PropertyCard/PropertyCard";

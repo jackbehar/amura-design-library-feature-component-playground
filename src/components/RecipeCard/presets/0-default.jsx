@@ -3,7 +3,7 @@ import RecipeCard from '../RecipeCard';
 
 export default (
   <RecipeCard
-    imageUrl="https://via.placeholder.com/160x120.png?text=Recipe"
+    imageUrl="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80"
     recipeName="Mediterranean bowl"
     calories="420"
     cookingTime="25 min"

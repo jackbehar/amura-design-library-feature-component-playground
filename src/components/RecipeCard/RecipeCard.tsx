@@ -67,7 +67,7 @@ const getDietTypeSmallIcon = (dietType: DietType): JSX.Element | null => {
 
 /**
  * @uxpindocurl https://www.uxpin.com/docs/
- * @uxpindescription Recipe tile with image, diet icon, calories, cook time, and optional action.
+ * @uxpindescription Recipe tile with image, diet icon, calories, cook time, and optional action. Prop imageUrl is an image URL; types use * @uxpincontroltype image (RecipeCard.types.ts).
  */
 export default function RecipeCard(props: IRecipeCardProps) {
   const {
